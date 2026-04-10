@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WesNal Launcher</title>
+  <link rel="stylesheet" href="./styles/base.css" />
+</head>
+<body>
+  <div id="app">
+    <div class="app-container">
+      <header class="header">
+        <div class="logo">WesNal</div>
+        <nav class="nav-tabs">
+          <button class="nav-tab active" data-panel="versions">Версии</button>
+          <button class="nav-tab" data-panel="accounts">Аккаунты</button>
+          <button class="nav-tab" data-panel="servers">Дополнительно</button>
+          <button class="nav-tab" data-panel="settings">Настройки</button>
+        </nav>
+      </header>
+
+      <main class="main-content">
+        <aside class="sidebar">
+          <div id="account-panel" style="flex: 1; display: flex; flex-direction: column;"></div>
+        </aside>
+
+        <div class="content-area">
+          <div id="versions-panel" class="panel active"></div>
+          <div id="accounts-panel" class="panel"></div>
+          <div id="servers-panel" class="panel"></div>
+          <div id="settings-panel" class="panel"></div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="status-bar">
+          <span class="status-indicator" id="status-indicator"></span>
+          <span id="status-text">Готов к запуску</span>
+        </div>
+        <button class="launch-btn" id="launch-btn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M8 5v14l11-7z"/>
+          </svg>
+          Запустить
+        </button>
+      </footer>
+    </div>
+
+    <div class="toast-container" id="toast-container"></div>
+  </div>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
